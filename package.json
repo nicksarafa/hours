@@ -1,0 +1,12 @@
+{
+  "name": "hours",
+  "version": "1.0.0",
+  "description": "Fibonacci sequence universal constant demo app",
+  "main": "index.js",
+  "repository": {
+    "url": "https://github.com/nsarafa/hours.git",
+    "type": "git"
+  },
+  "author": "nsarafa <nicksarafa@gmail.com>",
+  "license": "MIT"
+}
