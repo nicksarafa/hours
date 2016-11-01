@@ -1,19 +1,22 @@
 import 'babel-polyfill'
-
-import React, { PropTypes } from 'react'
+import React from 'react'
 import ReactDOM from 'react-dom'
-import Test from '../shared/test'
+import { createStore, combineReducers } from 'redux'
+import { Provider } from 'react-redux'
+import birdReducer from '../client/reducers/bird-reducer'
+import TalkMessage from '../containers/talk-message'
+import TalkButton from '../containers/talk-button'
 
-const testMessage = new Test('Hello, David.').output()
+const store = createStore(combineReducers({
+  bird: birdReducer,
+}))
 
-const App = props => (
-  <div>
-    Hal says: {props.message}
-  </div>
+ReactDOM.render(
+  <Provider store={store}>
+    <div>
+      <TalkMessage />
+      <TalkButton />
+    </div>
+  </Provider>
+  , document.querySelector('.app')
 )
-
-App.propTypes = {
-  message: PropTypes.string.isRequired,
-}
-
-ReactDOM.render(<App message={testMessage} />, document.querySelector('.app'))
