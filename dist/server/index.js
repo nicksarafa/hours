@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 
-import Test from './test'
+import Test from '../shared/test'
 
 const dave = new Test('Dave')
 
