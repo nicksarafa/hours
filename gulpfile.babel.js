@@ -31,8 +31,13 @@ gulp.task('clean', () => del([
 gulp.task('build', ['lint', 'clean'], () => {
   return gulp.src(paths.allSrcJs)
     .pipe(babel())
-    .pipe(gulp.dest(paths.distDir))
+    .pipe(gulp.dest(paths.libDir))
 })
+
+gulp.task('test', ['build'], () =>
+  gulp.src(paths.allLibTests)
+    .pipe(mocha())
+)
 
 gulp.task('main', ['test'], () =>
   gulp.src(paths.clientEntryPoint)
@@ -56,8 +61,3 @@ gulp.task('lint', () => {
     .pipe(eslint.format())
     .pipe(eslint.failAfterError())
 })
-
-gulp.task('test', ['build'], () =>
-  gulp.src(paths.allLibTests)
-    .pipe(mocha())
-)
