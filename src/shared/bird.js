@@ -1,10 +1,13 @@
-class Bird {
+// @flow
 
-  constructor(name) {
+class Bird {
+  name: string;
+
+  constructor(name: string) {
     this.name = name
   }
 
-  talk() {
+  talk(): string {
     return `${this.name}, you there?`
   }
 
