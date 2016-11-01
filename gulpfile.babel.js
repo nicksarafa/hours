@@ -12,6 +12,8 @@ const paths = {
   allSrcJs: 'src/**/*.js',
   gulpFile: 'gulpfile.babel.js',
   libDir: 'lib',
+  distDir: 'dist',
+  webpackFile: 'webpack.config.babel.js',
 }
 
 gulp.task('clean', () => del(paths.libDir))
@@ -39,6 +41,7 @@ gulp.task('lint', () => {
   return gulp.src([
     paths.allSrcJs,
     paths.gulpFile,
+    paths.webpackFile,
   ])
     .pipe(eslint())
     .pipe(eslint.format())
