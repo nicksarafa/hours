@@ -1,6 +1,6 @@
 /* eslint-disable import/prefer-default-export */
 // define action type
-const MAKE_TALK = 'MAKE_TALK'
+export const MAKE_TALK = 'MAKE_TALK'
 
 // define action creator
 // action creator triggers MAKE_TALK action called makeTalk
