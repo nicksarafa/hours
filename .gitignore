@@ -1,3 +1,6 @@
+# lib (dist)
+/lib/
+
 # yarn
 yarn-error.log
 
