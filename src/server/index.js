@@ -1,11 +1,11 @@
 /* eslint-disable no-console */
 
-import Test from '../shared/test'
+import Test from '../shared/bird'
 
-const dave = new Test('Dave')
+const zazu = new Test('Zazu')
 
 // es6 test
-console.log(dave.output())
+console.log(zazu.talk())
 
 // world init test
 console.log('🌎')

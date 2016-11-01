@@ -1,12 +1,12 @@
-class Test {
+class Bird {
 
   constructor(name) {
     this.name = name
   }
 
-  output() {
+  talk() {
     return `${this.name}, you there?`
   }
 }
 
-export default Test
+export default Bird

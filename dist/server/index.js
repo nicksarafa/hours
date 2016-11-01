@@ -1,17 +1,17 @@
 'use strict';
 
-var _test = require('../shared/test');
+var _bird = require('../shared/bird');
 
-var _test2 = _interopRequireDefault(_test);
+var _bird2 = _interopRequireDefault(_bird);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var dave = new _test2.default('Dave');
+var zazu = new _bird2.default('Zazu');
 
 // es6 test
 /* eslint-disable no-console */
 
-console.log(dave.output());
+console.log(zazu.talk());
 
 // world init test
 console.log('🌎');
