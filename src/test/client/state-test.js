@@ -3,12 +3,12 @@
 import { createStore } from 'redux'
 import { combineReducers } from 'react-immutable'
 import { should } from 'chai'
-import { descripe, it, beforeEach } from 'mocha'
-import { birdReducer } from '../../client/reducers/bird-reducer'
+import { describe, it, beforeEach } from 'mocha'
+import birdReducer from '../../client/reducers/bird-reducer'
 import { makeTalk } from '../../client/actions/bird-actions'
 
 should()
-let store()
+let store
 
 describe('App State', () => {
   describe('Bird', () => {
@@ -17,12 +17,12 @@ describe('App State', () => {
         bird: birdReducer,
       }))
     })
-  })
-  describe('makeTalk', () => {
-    it('should make hasTalked go from false to true', () => {
-      store.getState().getIn(['bird', 'hasTalked']).should.be.false
-      store.dispatch(makeTalk())
-      store.getState().getIn(['bird', 'hasTalked']).should.be.true
+    describe('makeTalk', () => {
+      it('should make hasTalked go from false to true', () => {
+        store.getState().getIn(['bird', 'hasTalked']).should.be.false
+        store.dispatch(makeTalk())
+        store.getState().getIn(['bird', 'hasTalked']).should.be.true
+      })
     })
   })
 })
