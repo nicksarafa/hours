@@ -1,3 +1,4 @@
+/* eslint-disable import/prefer-default-export */
 // define action type
 const MAKE_TALK = 'MAKE_TALK'
 
