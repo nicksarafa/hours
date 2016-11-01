@@ -1,3 +1,7 @@
+/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable arrow-body-style */
+/* eslint-disable no-console */
+
 import gulp from 'gulp'
 import babel from 'gulp-babel'
 import del from 'del'
@@ -10,9 +14,7 @@ const paths = {
   libDir: 'lib',
 }
 
-gulp.task('clean', () => {
-  return del([paths.libDir])
-})
+gulp.task('clean', () => del(paths.libDir))
 
 gulp.task('build', ['lint', 'clean'], () => {
   return gulp.src(paths.allSrcJs)

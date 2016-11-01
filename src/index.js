@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+
 import Test from './test'
 
 const dave = new Test('Dave')

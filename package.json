@@ -10,7 +10,11 @@
     "extends": "airbnb",
     "plugins": [
       "import"
-    ]
+    ],
+    "rules":{
+      "semi": 0,
+      "eol-last": 0
+    }
   },
   "babel": {
     "presets": [
