@@ -11,7 +11,7 @@
     "plugins": [
       "import"
     ],
-    "rules":{
+    "rules": {
       "semi": 0,
       "eol-last": 0
     },
@@ -24,7 +24,11 @@
       "latest"
     ]
   },
+  "dependencies": {
+    "babel-polyfill": "^6.16.0"
+  },
   "devDependencies": {
+    "babel-loader": "^6.2.7",
     "babel-preset-latest": "^6.16.0",
     "del": "^2.2.2",
     "eslint": "^3.9.1",

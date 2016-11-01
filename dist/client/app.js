@@ -1,3 +1,5 @@
+import 'babel-polyfill'
+
 import Test from '../shared/test'
 
 const bowser = new Test('Bowser Baddie')
