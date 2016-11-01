@@ -1,3 +1,12 @@
+# client bundle(s)
+/dist/client-bundle.js*
+
+# lib (dist)
+/lib/
+
+# yarn
+yarn-error.log
+
 # Logs
 logs
 *.log
