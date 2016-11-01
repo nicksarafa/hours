@@ -38,7 +38,8 @@
     "eslint-plugin-react": "^6.4.1",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
-    "gulp-eslint": "^3.0.1"
+    "gulp-eslint": "^3.0.1",
+    "webpack-stream": "^3.2.0"
   },
   "repository": {
     "url": "https://github.com/nsarafa/hours.git",
