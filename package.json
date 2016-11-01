@@ -7,6 +7,9 @@
     "start": "gulp"
   },
   "eslintConfig": {
+    "env": {
+      "browser": true
+    },
     "extends": "airbnb",
     "plugins": [
       "import"
@@ -14,9 +17,6 @@
     "rules": {
       "semi": 0,
       "eol-last": 0
-    },
-    "env": {
-      "browser": true
     }
   },
   "babel": {
