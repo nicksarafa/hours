@@ -32,7 +32,8 @@
   "babel": {
     "presets": [
       "latest",
-      "react"
+      "react",
+      "flow"
     ]
   },
   "dependencies": {
@@ -47,6 +48,7 @@
   },
   "devDependencies": {
     "babel-loader": "^6.2.7",
+    "babel-preset-flow": "^1.0.0",
     "babel-preset-latest": "^6.16.0",
     "babel-preset-react": "^6.16.0",
     "chai": "^3.5.0",
@@ -59,6 +61,7 @@
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
     "gulp-eslint": "^3.0.1",
+    "gulp-flowtype": "^1.0.0",
     "gulp-mocha": "^3.0.1",
     "mocha": "^3.1.2",
     "sinon": "^1.17.6",
