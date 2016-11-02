@@ -7,7 +7,7 @@ import eslint from 'gulp-eslint'
 import webpack from 'webpack-stream'
 import mocha from 'gulp-mocha'
 import flow from 'gulp-flowtype'
-// import postcss from 'gulp-postcss'
+import postcss from 'gulp-postcss'
 import sourcemaps from 'gulp-sourcemaps'
 import webpackConfig from './webpack.config.babel'
 
@@ -68,6 +68,9 @@ gulp.task('test', ['build'], () =>
 gulp.task('css', () => {
   return gulp.src(paths.allSrcCss)
     .pipe(sourcemaps.init())
+    .pipe(postcss([
+      // postcss plugin(s) here
+    ]))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(paths.distDir))
 })
