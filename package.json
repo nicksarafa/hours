@@ -8,14 +8,18 @@
     "test": "gulp test"
   },
   "eslintConfig": {
+    "extends": [
+      "airbnb",
+      "plugin:flowtype/recommended"
+    ],
+    "parser": "babel-eslint",
+    "plugins": [
+      "import",
+      "flowtype"
+    ],
     "env": {
       "browser": true
     },
-    "parser": "babel-eslint",
-    "extends": "airbnb",
-    "plugins": [
-      "import"
-    ],
     "rules": {
       "semi": 0,
       "eol-last": 0,
@@ -33,9 +37,9 @@
   "babel": {
     "presets": [
       "latest",
-      "react",
-      "flow"
-    ]
+      "react"
+    ],
+    "compact": false
   },
   "dependencies": {
     "babel-polyfill": "^6.16.0",
