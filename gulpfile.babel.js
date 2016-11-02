@@ -1,6 +1,4 @@
-/* eslint-disable import/no-extraneous-dependencies */
-/* eslint-disable arrow-body-style */
-/* eslint-disable no-console */
+/* eslint-disable import/no-extraneous-dependencies arrow-body-style no-console */
 
 import gulp from 'gulp'
 import babel from 'gulp-babel'
@@ -9,6 +7,8 @@ import eslint from 'gulp-eslint'
 import webpack from 'webpack-stream'
 import mocha from 'gulp-mocha'
 import flow from 'gulp-flowtype'
+// import postcss from 'gulp-postcss'
+import sourcemaps from 'gulp-sourcemaps'
 import webpackConfig from './webpack.config.babel'
 
 const paths = {
@@ -22,6 +22,7 @@ const paths = {
   distDir: 'dist',
   clientBundle: 'dist/client-bundle.js?(.map)',
   allLibTests: 'lib/test/**/*.js',
+  allSrcCss: 'src/**/*.css',
 }
 
 gulp.task('clean', () => del([
@@ -63,3 +64,10 @@ gulp.task('test', ['build'], () =>
   gulp.src(paths.allLibTests)
     .pipe(mocha())
 )
+
+gulp.task('css', () => {
+  return gulp.src(paths.allSrcCss)
+    .pipe(sourcemaps.init())
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest(paths.distDir))
+})
