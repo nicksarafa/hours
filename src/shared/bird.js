@@ -1,10 +1,11 @@
 class Bird {
+  name: string
 
-  constructor(name) {
+  constructor(name: string) {
     this.name = name
   }
 
-  talk() {
+  talk(): string {
     return `${this.name}, you there?`
   }
 

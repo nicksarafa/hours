@@ -8,6 +8,7 @@ import del from 'del'
 import eslint from 'gulp-eslint'
 import webpack from 'webpack-stream'
 import mocha from 'gulp-mocha'
+import flow from 'gulp-flowtype'
 import webpackConfig from './webpack.config.babel'
 
 const paths = {
@@ -34,11 +35,6 @@ gulp.task('build', ['lint', 'clean'], () => {
     .pipe(gulp.dest(paths.libDir))
 })
 
-gulp.task('test', ['build'], () =>
-  gulp.src(paths.allLibTests)
-    .pipe(mocha())
-)
-
 gulp.task('main', ['test'], () =>
   gulp.src(paths.clientEntryPoint)
     .pipe(webpack(webpackConfig))
@@ -60,4 +56,10 @@ gulp.task('lint', () => {
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError())
+    .pipe(flow({ abort: true }))
 })
+
+gulp.task('test', ['build'], () =>
+  gulp.src(paths.allLibTests)
+    .pipe(mocha())
+)
