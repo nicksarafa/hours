@@ -70,6 +70,11 @@ gulp.task('test', ['build'], () =>
 gulp.task('css', () => {
   const allCssPlugins = [
     cssnext,
+    // List other imported postcss plugins here
+    // stylelint
+    // cssnano
+    // PostCSS Assets - asset paths (cache buster too)
+    // React Inline - inline styles for AMP site later https://github.com/martinandert/react-inline
   ]
   return gulp.src(paths.allSrcCss)
     .pipe(sourcemaps.init())
