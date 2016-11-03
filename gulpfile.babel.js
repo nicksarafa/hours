@@ -1,4 +1,4 @@
-/* eslint-disable import/no-extraneous-dependencies arrow-body-style no-console */
+/* eslint-disable import/no-extraneous-dependencies, arrow-body-style, no-console */
 
 import gulp from 'gulp'
 import babel from 'gulp-babel'
