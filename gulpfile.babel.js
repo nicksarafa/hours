@@ -9,6 +9,7 @@ import mocha from 'gulp-mocha'
 import flow from 'gulp-flowtype'
 import postcss from 'gulp-postcss'
 import sourcemaps from 'gulp-sourcemaps'
+import cssnext from 'postcss-cssnext'
 import webpackConfig from './webpack.config.babel'
 
 const paths = {
@@ -66,11 +67,12 @@ gulp.task('test', ['build'], () =>
 )
 
 gulp.task('css', () => {
+  const allCssPlugins = [
+    cssnext,
+  ]
   return gulp.src(paths.allSrcCss)
     .pipe(sourcemaps.init())
-    .pipe(postcss([
-      // postcss plugin(s) here
-    ]))
+    .pipe(postcss(allCssPlugins))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(paths.distDir))
 })
