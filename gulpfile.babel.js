@@ -45,6 +45,7 @@ gulp.task('main', ['test'], () =>
 
 gulp.task('watch', () => {
   gulp.watch(paths.allSrcJs, ['main'])
+  gulp.watch(paths.allSrcCss, ['css'])
 })
 
 gulp.task('default', ['watch', 'main'])
@@ -74,5 +75,5 @@ gulp.task('css', () => {
     .pipe(sourcemaps.init())
     .pipe(postcss(allCssPlugins))
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest(paths.distDir))
+    .pipe(gulp.dest(paths.libDir))
 })
