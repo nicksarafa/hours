@@ -10,6 +10,8 @@ import flow from 'gulp-flowtype'
 import postcss from 'gulp-postcss'
 import sourcemaps from 'gulp-sourcemaps'
 import cssnext from 'postcss-cssnext'
+import autoprefixer from 'autoprefixer'
+import precss from 'precss'
 import webpackConfig from './webpack.config.babel'
 
 const paths = {
@@ -70,6 +72,8 @@ gulp.task('test', ['build'], () =>
 gulp.task('css', () => {
   const allCssPlugins = [
     cssnext,
+    autoprefixer,
+    precss,
     // List other imported postcss plugins here
     // stylelint
     // cssnano
