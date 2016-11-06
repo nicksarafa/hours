@@ -21,6 +21,12 @@
       "browser": true
     },
     "rules": {
+      "generator-star-spacing": [
+        "error", {
+          "before": true,
+          "after": false
+        }
+      ],
       "semi": 0,
       "eol-last": 0,
       "new-cap": [
@@ -52,6 +58,7 @@
     "redux-immutable": "^3.0.8"
   },
   "devDependencies": {
+    "autoprefixer": "^6.5.1",
     "babel-eslint": "^7.1.0",
     "babel-loader": "^6.2.7",
     "babel-preset-flow": "^1.0.0",
@@ -74,6 +81,8 @@
     "gulp-sourcemaps": "^2.2.0",
     "mocha": "^3.1.2",
     "postcss-cssnext": "^2.8.0",
+    "postcss-loader": "^1.1.0",
+    "precss": "^1.4.0",
     "sinon": "^1.17.6",
     "sinon-chai": "^2.8.0",
     "webpack-stream": "^3.2.0"
