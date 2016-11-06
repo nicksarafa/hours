@@ -23,8 +23,8 @@
     "rules": {
       "generator-star-spacing": [
         "error", {
-          "before": false,
-          "after": true
+          "before": true,
+          "after": false
         }
       ],
       "semi": 0,
