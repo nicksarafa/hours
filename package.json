@@ -21,6 +21,7 @@
       "browser": true
     },
     "rules": {
+      "jsx-a11y/anchor-has-content" : 0,
       "generator-star-spacing": [
         "error", {
           "before": true,
