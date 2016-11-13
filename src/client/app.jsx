@@ -8,6 +8,8 @@ import birdReducer from '../client/reducers/bird-reducer'
 import TalkMessage from './containers/talk-message'
 import TalkButton from './containers/talk-button'
 
+import Navigation from './components/navigation'
+
 const store = createStore(combineReducers({
   bird: birdReducer,
 }))
@@ -15,6 +17,7 @@ const store = createStore(combineReducers({
 ReactDOM.render(
   <Provider store={store}>
     <div>
+      <Navigation />
       <TalkMessage />
       <TalkButton />
     </div>
