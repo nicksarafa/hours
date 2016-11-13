@@ -8,10 +8,17 @@
 
 import React, { PropTypes } from 'react'
 
+const style = {
+  container: {
+    backgroundColor: '#C0C0C0',
+    borderRadius: 100,
+    height: 144,
+    width: 144,
+  },
+}
+
 const Logo = () => (
-  <div>
-    <div className="Logo" />
-  </div>
+  <div style={style.container} />
 )
 
 Logo.propTypes = {
