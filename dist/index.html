@@ -5,9 +5,15 @@
       /**
        * apply a natural box layout model to all elements, but allowing components to change
        * @source - https://www.paulirish.com/2012/box-sizing-border-box-ftw/
+       * @todo - scope global style into appropriate stylesheet, with gulp task for compiling between dev/deploy
        */
       html { box-sizing: border-box; }
       *, *:before, *:after { box-sizing: inherit; }
+      body {
+        margin: 0 auto;
+        max-width: 967px;
+        padding: 0;
+      }
     </style>
   </head>
   <body>

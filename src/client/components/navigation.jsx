@@ -1,6 +1,7 @@
 /**
  * @export Navigation
  * @description container for top navigation
+ * @todo remove marginTop (maybe)
  *
  * @interface
  */
@@ -26,6 +27,7 @@ class Navigation extends Component {
         flexDirection: 'row',
         flexWrap: 'nowrap',
         justifyContent: 'space-between',
+        marginTop: 55,
       },
     }
 
