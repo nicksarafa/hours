@@ -9,21 +9,28 @@
 import React, { PropTypes } from 'react'
 
 const style = {
-  center: {
-    marginBottom: 20,
-    marginTop: 20,
+  container: {
+    alignItems: 'space-between',
+    display: 'flex',
+    flexDirection: 'column',
+    width: 55,
   },
   layer: {
-    background: '#COCOCO',
+    backgroundColor: '#C0C0C0',
     height: 5,
-    width: 55,
+    width: 'inherit',
+  },
+  break: {
+    height: 20,
   },
 }
 
 const Hamburger = () => (
-  <div>
+  <div style={style.container}>
     <div style={style.layer} />
-    <div style={[style.layer, style.center]} />
+    <div style={style.break} />
+    <div style={style.layer} />
+    <div style={style.break} />
     <div style={style.layer} />
   </div>
 )
