@@ -19,8 +19,18 @@ class Navigation extends Component {
   }
 
   render() {
+    const style = {
+      container: {
+        alignItems: 'flex-end',
+        display: 'flex',
+        flexDirection: 'row',
+        flexWrap: 'nowrap',
+        justifyContent: 'space-between',
+      },
+    }
+
     return (
-      <div>
+      <div style={style.container}>
         <Hamburger isOpen={this.state.isHidden} />
         <Logo color="" />
         <Link linkLabel="Hire Me" />
