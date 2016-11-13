@@ -12,8 +12,8 @@ const style = {
   container: {
     backgroundColor: '#C0C0C0',
     borderRadius: 100,
-    height: 144,
-    width: 144,
+    height: 55,
+    width: 55,
   },
 }
 

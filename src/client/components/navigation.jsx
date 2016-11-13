@@ -1,7 +1,7 @@
 /**
  * @export Navigation
  * @description container for top navigation
- * @todo remove marginTop (maybe)
+ * @todo remove placeholder margins
  *
  * @interface
  */
@@ -27,15 +27,22 @@ class Navigation extends Component {
         flexDirection: 'row',
         flexWrap: 'nowrap',
         justifyContent: 'space-between',
-        marginTop: 55,
+        marginTop: 21,
+      },
+      subWrap: {
+        marginBottom: 13,
       },
     }
 
     return (
       <div style={style.container}>
-        <Hamburger isOpen={this.state.isHidden} />
+        <div style={style.subWrap}>
+          <Hamburger isOpen={this.state.isHidden} />
+        </div>
         <Logo color="" />
-        <Link linkLabel="Hire Me" />
+        <div style={style.subWrap}>
+          <Link linkLabel="Hire Me" />
+        </div>
       </div>
     )
   }

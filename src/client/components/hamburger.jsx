@@ -12,13 +12,13 @@ const style = {
   container: {
     display: 'flex',
     flexDirection: 'column',
-    height: 55,
+    height: 21,
     justifyContent: 'space-between',
-    width: 55,
+    width: 21,
   },
   layer: {
     backgroundColor: '#C0C0C0',
-    height: 5,
+    height: 2,
   },
 }
 
