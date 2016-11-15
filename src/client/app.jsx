@@ -17,7 +17,6 @@ import TalkMessage from './containers/talk-message'
 import TalkButton from './containers/talk-button'
 
 import menuReducer from '../client/reducers/menu-reducer'
-import Hamburger from '../client/containers/hamburger-button'
 
 import Navigation from './components/navigation'
 
@@ -29,7 +28,6 @@ const store = createStore(combineReducers({
 ReactDOM.render(
   <Provider store={store}>
     <div>
-      <Hamburger />
       <Navigation />
       <div style={{ display: 'none' }}>
         <TalkMessage />
