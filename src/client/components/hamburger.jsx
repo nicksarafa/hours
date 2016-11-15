@@ -10,6 +10,7 @@ import React, { PropTypes } from 'react'
 
 const style = {
   container: {
+    cursor: 'pointer',
     display: 'flex',
     flexDirection: 'column',
     height: 21,

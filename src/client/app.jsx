@@ -11,19 +11,25 @@ import ReactDOM from 'react-dom'
 import { createStore } from 'redux'
 import { combineReducers } from 'redux-immutable'
 import { Provider } from 'react-redux'
+
 import birdReducer from '../client/reducers/bird-reducer'
 import TalkMessage from './containers/talk-message'
 import TalkButton from './containers/talk-button'
+
+import menuReducer from '../client/reducers/menu-reducer'
+import Hamburger from '../client/containers/hamburger-button'
 
 import Navigation from './components/navigation'
 
 const store = createStore(combineReducers({
   bird: birdReducer,
+  menu: menuReducer,
 }))
 
 ReactDOM.render(
   <Provider store={store}>
     <div>
+      <Hamburger />
       <Navigation />
       <div style={{ display: 'none' }}>
         <TalkMessage />
