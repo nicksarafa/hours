@@ -18,7 +18,7 @@ function Navigation() {
       display: 'flex',
       flexDirection: 'row',
       flexWrap: 'nowrap',
-      justifyContent: 'space-between',
+      justifyContent: 'space-around',
       marginTop: 21,
     },
     subWrap: {
