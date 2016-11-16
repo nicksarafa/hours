@@ -23,9 +23,10 @@
     "rules": {
       "react/prefer-stateless-function": 1,
       "no-script-url": 0,
-      "jsx-a11y/anchor-has-content" : 0,
+      "jsx-a11y/anchor-has-content": 0,
       "generator-star-spacing": [
-        "error", {
+        "error",
+        {
           "before": true,
           "after": false
         }
@@ -53,6 +54,7 @@
   "dependencies": {
     "babel-polyfill": "^6.16.0",
     "immutable": "^3.8.1",
+    "moment": "^2.16.0",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "react-redux": "^4.4.6",

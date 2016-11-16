@@ -1,21 +1,22 @@
 import React, { PropTypes } from 'react'
+import moment from 'moment'
 
 function Post({ date, title }) {
   return (
     <div>
       <h3>{title}</h3>
-      <span>{date}</span>
+      <h5>{date}</h5>
     </div>
   )
 }
 
 Post.propTypes = {
-  date: PropTypes.string.isRequired,
+  date: PropTypes.func.isRequired,
   title: PropTypes.string.isRequired,
 }
 
 Post.defaultProps = {
-  date: 'November 5, 2016',
+  date: moment().startOf('day').fromNow(),
   title: 'The Gunpowder Treason',
 }
 
