@@ -8,10 +8,17 @@ import React, { PropTypes } from 'react'
 import moment from 'moment'
 
 const Post = ({ backDrop, date, title }) => {
-  const backdrop = { backgroundImage: backDrop }
+  const style = {
+    container: {
+      backgroundImage: backDrop,
+      backgroundRepeat: 'no-repeat',
+      height: 377,
+      width: '100%',
+    },
+  }
 
   return (
-    <div style={backdrop}>
+    <div style={style.container}>
       <h3>{title}</h3>
       <h5>{date}</h5>
     </div>
@@ -25,7 +32,7 @@ Post.propTypes = {
 }
 
 Post.defaultProps = {
-  backDrop: 'url(http://placehold.it/350x150)',
+  backDrop: 'url(http://placehold.it/1000x1000)',
   date: moment().startOf('day').fromNow(),
   title: 'The Gunpowder Treason',
 }
