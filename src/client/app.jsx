@@ -20,6 +20,8 @@ import menuReducer from '../client/reducers/menu-reducer'
 
 import Navigation from './components/navigation'
 
+import Post from './components/post'
+
 const store = createStore(combineReducers({
   bird: birdReducer,
   menu: menuReducer,
@@ -33,6 +35,7 @@ ReactDOM.render(
         <TalkMessage />
         <TalkButton />
       </div>
+      <Post />
     </div>
   </Provider>
   , document.querySelector('.app')
