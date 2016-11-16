@@ -19,6 +19,7 @@ function Navigation() {
       flexDirection: 'row',
       flexWrap: 'nowrap',
       justifyContent: 'space-around',
+      marginBottom: 21,
       marginTop: 21,
     },
     subWrap: {
