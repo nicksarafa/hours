@@ -1,6 +1,10 @@
 /**
  * @export [openMenu, closeMenu]
  * @description actions for opening/closing (showing/hiding) top level menu navigation
+ * @implements redux-actions for easier to read/write react-redux actions
+ * @see https://github.com/acdlite/redux-actions
+ *
+ * @interface
  */
 import { createAction } from 'redux-actions'
 

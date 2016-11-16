@@ -17,6 +17,7 @@ import menuReducer from '../client/reducers/menu-reducer'
 import Navigation from './components/navigation'
 
 import Post from './components/post'
+import Code from './components/code'
 
 const store = createStore(combineReducers({
   menu: menuReducer,
@@ -27,6 +28,7 @@ ReactDOM.render(
     <div>
       <Navigation />
       <Post />
+      <Code />
     </div>
   </Provider>
   , document.querySelector('.app')
