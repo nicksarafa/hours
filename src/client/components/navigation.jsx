@@ -7,7 +7,7 @@
  */
 
 import React, { PropTypes } from 'react'
-import Hamburger from '../containers/hamburger-button'
+import Menu from '../containers/menu-button'
 import Logo from './logo'
 import Link from './link'
 
@@ -29,7 +29,7 @@ function Navigation() {
   return (
     <div style={style.container}>
       <div style={style.subWrap}>
-        <Hamburger />
+        <Menu />
       </div>
       <Logo color="" />
       <div style={style.subWrap}>

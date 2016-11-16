@@ -1,7 +1,7 @@
 /**
- * @export Hamburger
- * @description hand made hamburger menu icon
- * @todo re-write using flexbox space-between
+ * @export Menu
+ * @description hand made menu icon
+ * @todo cook something up thats better than a hamburger
  *
  * @interface
  */
@@ -23,7 +23,7 @@ const style = {
   },
 }
 
-const Hamburger = () => (
+const Menu = () => (
   <div style={style.container}>
     <div style={style.layer} />
     <div style={style.layer} />
@@ -31,12 +31,12 @@ const Hamburger = () => (
   </div>
 )
 
-Hamburger.propTypes = {
+Menu.propTypes = {
   isOpen: PropTypes.bool.isRequired,
 }
 
-Hamburger.defaultProps = {
+Menu.defaultProps = {
   isOpen: false,
 }
 
-export default Hamburger
+export default Menu

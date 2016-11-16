@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import Hamburger from '../components/hamburger'
+import Menu from '../components/menu'
 import { closeMenu, openMenu } from '../actions/menu-actions'
 
 const mapDispatchToProps = dispatch => ({
@@ -7,4 +7,4 @@ const mapDispatchToProps = dispatch => ({
   actionLabel: 'Menu button pressed',
 })
 
-export default connect(null, mapDispatchToProps)(Hamburger)
+export default connect(null, mapDispatchToProps)(Menu)
