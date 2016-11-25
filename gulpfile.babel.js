@@ -1,31 +1,33 @@
-/* eslint-disable import/no-extraneous-dependencies, arrow-body-style, no-console */
+/* eslint-disable import/no-extraneous-dependencies, arrow-body-style, no-console, no-multi-spaces, max-len */
 
-import gulp from 'gulp'
-import babel from 'gulp-babel'
-import del from 'del'
-import eslint from 'gulp-eslint'
-import webpack from 'webpack-stream'
-import mocha from 'gulp-mocha'
-import flow from 'gulp-flowtype'
-import postcss from 'gulp-postcss'
-import sourcemaps from 'gulp-sourcemaps'
-import cssnext from 'postcss-cssnext'
-import autoprefixer from 'autoprefixer'
-import precss from 'precss'
+import autoprefixer  from 'autoprefixer'
+import babel         from 'gulp-babel'
+import cssnext       from 'postcss-cssnext'
+import cssnano       from 'cssnano'
+import del           from 'del'
+import eslint        from 'gulp-eslint'
+import flow          from 'gulp-flowtype'
+import gulp          from 'gulp'
+import mocha         from 'gulp-mocha'
+import postcss       from 'gulp-postcss'
+import precss        from 'precss'
+import sourcemaps    from 'gulp-sourcemaps'
+import stylelint     from 'stylelint'
+import webpack       from 'webpack-stream'
 import webpackConfig from './webpack.config.babel'
 
 const paths = {
-  allSrcJs: 'src/**/*.js?(x)',
-  serverSrcJs: 'src/server/**/*.js?(x)',
-  sharedSrcJs: 'src/shared/**/*.js?(x)',
-  clientEntryPoint: 'src/client/app.jsx',
-  gulpFile: 'gulpfile.babel.js',
-  webpackFile: 'webpack.config.babel.js',
-  libDir: 'lib',
-  distDir: 'dist',
-  clientBundle: 'dist/client-bundle.js?(.map)',
   allLibTests: 'lib/test/**/*.js',
   allSrcCss: 'src/**/*.css',
+  allSrcJs: 'src/**/*.js?(x)',
+  clientBundle: 'dist/client-bundle.js?(.map)',
+  clientEntryPoint: 'src/client/app.jsx',
+  distDir: 'dist',
+  gulpFile: 'gulpfile.babel.js',
+  libDir: 'lib',
+  serverSrcJs: 'src/server/**/*.js?(x)',
+  sharedSrcJs: 'src/shared/**/*.js?(x)',
+  webpackFile: 'webpack.config.babel.js',
 }
 
 gulp.task('clean', () => del([
@@ -69,16 +71,18 @@ gulp.task('test', ['build'], () =>
     .pipe(mocha())
 )
 
+/**
+ * List other imported postcss plugins here
+ * PostCSS Assets - asset paths (cache buster too)
+ * React Inline - inline styles for AMP site later https://github.com/martinandert/react-inline
+ */
 gulp.task('css', () => {
   const allCssPlugins = [
-    cssnext,
     autoprefixer,
+    cssnano,
+    cssnext,
     precss,
-    // List other imported postcss plugins here
-    // stylelint
-    // cssnano
-    // PostCSS Assets - asset paths (cache buster too)
-    // React Inline - inline styles for AMP site later https://github.com/martinandert/react-inline
+    stylelint,
   ]
   return gulp.src(paths.allSrcCss)
     .pipe(sourcemaps.init())
