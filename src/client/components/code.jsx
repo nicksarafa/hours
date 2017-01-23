@@ -2,6 +2,7 @@
  * @export Code
  * @description wrap code in blog posts using this stateless module
  * @todo copy/pasta button for desktop visitors
+ * @property code: String of code passed for pretty display
  *
  * @interface
  */

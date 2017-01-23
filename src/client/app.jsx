@@ -18,6 +18,7 @@ import Navigation from './components/navigation'
 
 import Post from './components/post'
 import Code from './components/code'
+import Social from './components/social'
 
 const store = createStore(combineReducers({
   menu: menuReducer,
@@ -29,6 +30,7 @@ ReactDOM.render(
       <Navigation />
       <Post />
       <Code />
+      <Social />
     </div>
   </Provider>
   , document.querySelector('.app')
