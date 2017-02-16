@@ -42,7 +42,7 @@ gulp.task('build', ['lint', 'clean'], () => {
 gulp.task('main', ['test'], () =>
   gulp.src(paths.clientEntryPoint)
     .pipe(webpack(webpackConfig))
-    .pipe(gulp.dest(paths.distDir))
+    .pipe(gulp.dest(paths.distDir)),
 )
 
 gulp.task('watch', () => {
@@ -66,7 +66,7 @@ gulp.task('lint', () => {
 
 gulp.task('test', ['build'], () =>
   gulp.src(paths.allLibTests)
-    .pipe(mocha())
+    .pipe(mocha()),
 )
 
 gulp.task('css', () => {

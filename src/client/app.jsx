@@ -33,5 +33,5 @@ ReactDOM.render(
       <Social />
     </div>
   </Provider>
-  , document.querySelector('.app')
+  , document.querySelector('.app'),
 )
