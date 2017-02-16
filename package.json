@@ -31,6 +31,7 @@
           "after": false
         }
       ],
+      "no-use-before-define": 0,
       "semi": 0,
       "eol-last": 0,
       "new-cap": [
@@ -70,6 +71,7 @@
     "babel-preset-latest": "^6.16.0",
     "babel-preset-react": "^6.16.0",
     "chai": "^3.5.0",
+    "cssnano": "^3.8.0",
     "del": "^2.2.2",
     "eslint": "^3.10.1",
     "eslint-config-airbnb": "^14.1.0",
@@ -90,6 +92,7 @@
     "precss": "^1.4.0",
     "sinon": "^1.17.6",
     "sinon-chai": "^2.8.0",
+    "stylelint": "^7.6.0",
     "webpack-stream": "^3.2.0"
   },
   "repository": {

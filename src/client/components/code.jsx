@@ -8,7 +8,23 @@
  */
 import React, { PropTypes } from 'react'
 
-const styles = {
+const Code = ({ code }) => (
+  <pre style={style.pre}>
+    <code style={style.code}>{code}</code>
+  </pre>
+)
+
+Code.propTypes = {
+  code: PropTypes.string.isRequired,
+}
+
+Code.defaultProps = {
+  code: 'hello, world',
+}
+
+export default Code
+
+const style = {
   code: {
     color: '#555',
     fontFamily: "'fira mono', monospace",
@@ -32,19 +48,3 @@ const styles = {
     paddingTop: 21,
   },
 }
-
-const Code = ({ code }) => (
-  <pre style={styles.pre}>
-    <code style={styles.code}>{code}</code>
-  </pre>
-)
-
-Code.propTypes = {
-  code: PropTypes.string.isRequired,
-}
-
-Code.defaultProps = {
-  code: 'hello, world',
-}
-
-export default Code
